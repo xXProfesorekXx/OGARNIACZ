@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="manifest" href="manifest.json">
+
+  <meta charset="UTF-8">
+  <title>OGARNIK – Planer tygodnia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>🧠 OGARNIK ŻYCIA – Twój planer życia, bo sam se nie poradzisz</h1>
+
+    <div class="week-view">
+      <button onclick="pokazDzien('poniedzialek')">Pon</button>
+      <button onclick="pokazDzien('wtorek')">Wto</button>
+      <button onclick="pokazDzien('sroda')">Śr</button>
+      <button onclick="pokazDzien('czwartek')">Czw</button>
+      <button onclick="pokazDzien('piatek')">Pt</button>
+      <button onclick="pokazDzien('sobota')">Sob</button>
+      <button onclick="pokazDzien('niedziela')">Ndz</button>
+    </div>
+
+    <div class="task-form">
+      <input type="time" id="hourInput">
+      <input type="text" id="taskInput" placeholder="Wpisz co masz zrobić">
+      <button onclick="dodajZadanie()">Dodaj</button>
+    </div>
+
+    <!-- Widoki dni tygodnia -->
+    <div id="poniedzialekView" class="dzien" style="display: block">
+      <h2>Poniedziałek</h2>
+      <ul id="poniedzialekList"></ul>
+    </div>
+
+    <div id="wtorekView" class="dzien" style="display: none">
+      <h2>Wtorek</h2>
+      <ul id="wtorekList"></ul>
+    </div>
+
+    <div id="srodaView" class="dzien" style="display: none">
+      <h2>Środa</h2>
+      <ul id="srodaList"></ul>
+    </div>
+
+    <div id="czwartekView" class="dzien" style="display: none">
+      <h2>Czwartek</h2>
+      <ul id="czwartekList"></ul>
+    </div>
+
+    <div id="piatekView" class="dzien" style="display: none">
+      <h2>Piątek</h2>
+      <ul id="piatekList"></ul>
+    </div>
+
+    <div id="sobotaView" class="dzien" style="display: none">
+      <h2>Sobota</h2>
+      <ul id="sobotaList"></ul>
+    </div>
+
+    <div id="niedzielaView" class="dzien" style="display: none">
+      <h2>Niedziela</h2>
+      <ul id="niedzielaList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
